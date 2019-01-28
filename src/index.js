@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom'
 const Button = ({handleClick, text}) => <button onClick={handleClick}>{text}</button>
 
 const App = ({anecdotes}) => {
-    const [most, setMost] = useState(0)
     const [selected, setSelected] = useState(0)
     const [votes, setVotes] = useState(new Array(6).fill(0))
+    const [most, setMost] = useState(0)
 
     const handleNext = () => setSelected(Math.floor(Math.random() * 6))
     const handleVote = () => {
